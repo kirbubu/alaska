@@ -1,0 +1,8 @@
+c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\bin\Debug\CECS 328 Assignment 4.exe.config
+c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\bin\Debug\CECS 328 Assignment 4.exe
+c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\bin\Debug\CECS 328 Assignment 4.pdb
+c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.csprojResolveAssemblyReference.cache
+c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS_328_Assignment_4.Properties.Resources.resources
+c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.csproj.GenerateResource.Cache
+c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.exe
+c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.pdb
