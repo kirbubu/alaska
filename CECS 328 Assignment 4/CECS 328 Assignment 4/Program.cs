@@ -32,19 +32,21 @@ namespace CECS_328_Assignment_4
             Application.Run(new Form1());
 
             Combinations c = new Combinations();
-            int n = 6;
-            int[] arr=new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                arr[i] = i + 1;
-            }
+            //n =6
+           // int[] arr=new int[n];
+            //for (int i = 0; i < n; i++)
+            // {
+            //    arr[i] = i + 1;
+            //}
+            int [] arr =new int[] {1, 2, 3, 4, 5}; 
+            int subsetSize = 3; //print out subsets of size 2 
+            int x = arr.Length;
+            c.printCombination(arr, x, subsetSize); //print out all set combinations 
 
-           Console.WriteLine(c.nextCombination(arr, 2, n));
-            for(int i = 0; i < c.hold.Length; i++)
-            {
-                Console.WriteLine(c.hold[i]);
-            }
 
+            int ith = 4; //user choosing what number sub set they want to specifically print out 
+            Console.WriteLine("Begin option 3");
+            c.printCombination2(arr, x, subsetSize, ith);
 
 
         }
