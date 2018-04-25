@@ -48,9 +48,9 @@ namespace CECS_328_Assignment_4
         {
             foreach(GraphVertex<T> vertex in vertices)
             {
-                bool vertexequal;
+                bool vertexequal=true;
                 bool symbolequal = Equals(vertex.symbol, symbol);
-                Debugger.Break();
+                //Debugger.Break();
                 if(Equals(vertex.value,value) && vertex.symbol == symbol)
                 {
                     return vertex;

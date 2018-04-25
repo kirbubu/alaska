@@ -22,14 +22,32 @@ namespace CECS_328_Assignment_4
             Console.WriteLine(testvertex.children[0].value[0]);
             VertexList<GraphVertex<List<int>>> vertices = new VertexList<GraphVertex<List<int>>>() { neighbor1, testvertex };
             Graph<List<int>> graphtest = new Graph<List<int>>(vertices);
-            Debugger.Break();
+      //      Debugger.Break();
             Console.WriteLine(new List<int>() { 1, 2 } == new List<int>() { 1, 2 });
             graphtest.Remove(new List<int>() { 1, 2 }, "B");
-            Debugger.Break();
+        //    Debugger.Break();
             Console.WriteLine(testvertex.children[0].parents[0].symbol); //Checking to see who A's first child is and what the child's first parent is 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            Combinations c = new Combinations();
+            int n = 6;
+            int[] arr=new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = i + 1;
+            }
+
+           Console.WriteLine(c.nextCombination(arr, 2, n));
+            for(int i = 0; i < c.hold.Length; i++)
+            {
+                Console.WriteLine(c.hold[i]);
+            }
+
+
+
         }
     }
+     
 }
