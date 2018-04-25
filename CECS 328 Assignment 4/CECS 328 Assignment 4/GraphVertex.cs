@@ -10,14 +10,14 @@ namespace CECS_328_Assignment_4
     {
         //Undirected
         //public List<GraphVertex<T>> neighbors;
-        public List<GraphVertex<T>> parents;
-        public List<GraphVertex<T>> children;
+        public VertexList<GraphVertex<T>> parents;
+        public VertexList<GraphVertex<T>> children;
         public T value;
         public String symbol; 
         public GraphVertex() {
             value = default(T);
-            parents = new List<GraphVertex<T>>();
-            children = new List<GraphVertex<T>>();
+            parents = new VertexList<GraphVertex<T>>();
+            children = new VertexList<GraphVertex<T>>();
             symbol = "";
         }
 
@@ -25,15 +25,15 @@ namespace CECS_328_Assignment_4
         {
             this.value = value;
             this.symbol = symbol;
-            parents = new List<GraphVertex<T>>();
-            children = new List<GraphVertex<T>>();
+            parents = new VertexList<GraphVertex<T>>();
+            children = new VertexList<GraphVertex<T>>();
         }
 
         public GraphVertex(T value, String symbol, List<GraphVertex<T>> Parents, List<GraphVertex<T>> Children)
         {
             this.value = value;
-            this.parents = new List<GraphVertex<T>>();
-            this.children = new List<GraphVertex<T>>();
+            this.parents = new VertexList<GraphVertex<T>>();
+            this.children = new VertexList<GraphVertex<T>>();
             this.symbol = symbol;
             if(!Equals(Parents,null))
                 foreach(GraphVertex<T> parent in Parents)
