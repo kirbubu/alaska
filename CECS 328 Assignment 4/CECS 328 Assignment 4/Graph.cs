@@ -58,18 +58,23 @@ namespace CECS_328_Assignment_4
          **/
         public void AddDirectedEdge(GraphVertex<T> start, GraphVertex<T> end)
         {
+            if (this.Contains(start.value, start.symbol))
+                start = vertices[FindVertexIndex(start.value, start.symbol)];
+            if (this.Contains(end.value, end.symbol))
+                end = vertices[FindVertexIndex(end.value, end.symbol)] = end;
+            //Debugger.Break();
             //Adding to their respective lists
             start.children.Add(end);
             end.parents.Add(start);
             //If already in the graph, update
-            if (this.Contains(start))
-                vertices[FindVertexIndex(start)] = start;
+            if (this.Contains(start.value,start.symbol))
+                vertices[FindVertexIndex(start.value,start.symbol)] = start;
             //Otherwise add to the graph
             else
                 vertices.Add(start);
             //If already in the graph, update
-            if (this.Contains(end))
-                vertices[FindVertexIndex(end)] = end;
+            if (this.Contains(end.value,end.symbol))
+                vertices[FindVertexIndex(end.value,end.symbol)] = end;
             //Otherwise add to the graph
             else
                 vertices.Add(end);
@@ -79,11 +84,11 @@ namespace CECS_328_Assignment_4
          * Searches if any GraphVertex in the graph contains the given T value
          * Value: a generic type to be searched for
          **/
-        public bool Contains(T value)
+        public bool Contains(T value, String symbol)
         {
             foreach(GraphVertex<T> vertex in vertices)
             {
-                if (Equals(vertex.value, value))
+                if (Equals(vertex.value, value) && Equals(vertex.symbol,symbol))
                     return true;
             }
             return false;
@@ -218,7 +223,7 @@ namespace CECS_328_Assignment_4
          **/
         public List<KeyValuePair<GraphVertex<T>,int>> BFT(GraphVertex<T> start)
         {
-            List<KeyValuePair<GraphVertex<T>, int>> pairs = new List<KeyValuePair<GraphVertex<T>, int>>();
+            Dictionary<GraphVertex<T>, int> pairs = new Dictionary<GraphVertex<T>, int>();
             int distance = 0;
             //Initialize the list and the queue
             List<GraphVertex<T>> visited = new List<GraphVertex<T>>();
@@ -227,25 +232,31 @@ namespace CECS_328_Assignment_4
             visited.Add(start);
             queue.Enqueue(start);
             //Add the starting vertex to the pairs, distance will always be zero
-            pairs.Add(new KeyValuePair<GraphVertex<T>, int>(start, distance));
+            pairs.Add(start, distance);
+            distance++;
             //While the queue isn't empty
             while (queue.Count != 0)
             {
                 //Remove the vertex at the start of the queue
                 GraphVertex<T> current = queue.Dequeue();
-                //Increment distance by 1
-                distance++;
+            
+
+
                 foreach (GraphVertex<T> child in current.children)
                 {
                     if (!visited.Contains(child))
                     {
                         visited.Add(child);
                         queue.Enqueue(child);
-                        pairs.Add(new KeyValuePair<GraphVertex<T>, int>(child, distance));
+                        //Debugger.Break();
+                        int dist = pairs.FirstOrDefault(t => child.parents.Contains(t.Key)).Value;
+                        pairs.Add(child, dist+1);
                     }
                 }
+               
+               
             }
-            return pairs;
+            return pairs.ToList() ;
         }
     }
 }

@@ -13,15 +13,25 @@ namespace CECS_328_Assignment_4
     public partial class Form1 : Form
     {
 
-        int number = 0;
+        /**
+         * Constructor
+         **/
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        { 
-            label1.Text = "Counter: " + number++;
+
+        /**
+         * Part 1 Button Transferrer
+         * Sends the user to Part 1 of the program
+         **/
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Tag = this;
+            form2.Show(this);
+            Hide();
         }
     }
 }
