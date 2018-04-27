@@ -144,5 +144,21 @@ namespace CECS_328_Assignment_4
                 return false;
         }
 
+
+        /**
+         * Overriden Equals
+         **/
+        public override bool Equals(object obj)
+        {
+            GraphVertex<T> vertex = (GraphVertex<T>)obj;
+            if (Equals(vertex.value, this.value) && vertex.symbol == this.symbol)
+                return true;
+            else
+                return false;
+            
+        }
+
+        
+       
     }
 }

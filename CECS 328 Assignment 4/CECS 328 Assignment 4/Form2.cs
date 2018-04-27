@@ -42,6 +42,7 @@ namespace CECS_328_Assignment_4
         private void button3_Click(object sender, EventArgs e)
         {
             //Retrieve the list of key/value pairs from the Breadth First Traversal
+            Debugger.Break();
             List<KeyValuePair<GraphVertex<int>, int>> distances = graph.BFT(vertices[0]);
             //Reset TestBox for new data
             textBox6.Text = "";

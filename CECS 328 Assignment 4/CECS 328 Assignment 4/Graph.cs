@@ -59,9 +59,9 @@ namespace CECS_328_Assignment_4
         public void AddDirectedEdge(GraphVertex<T> start, GraphVertex<T> end)
         {
             if (this.Contains(start.value, start.symbol))
-                start = vertices[FindVertexIndex(start.value, start.symbol)];
+                start = vertices[FindVertexIndex(start)];
             if (this.Contains(end.value, end.symbol))
-                end = vertices[FindVertexIndex(end.value, end.symbol)] = end;
+                end = vertices[FindVertexIndex(end)];
             //Debugger.Break();
             //Adding to their respective lists
             start.children.Add(end);
@@ -101,7 +101,7 @@ namespace CECS_328_Assignment_4
         public bool Contains(GraphVertex<T> vertex)
         {
             foreach (GraphVertex<T> ver in vertices)
-                if (Equals(vertex, ver))
+                if (ver.Equals(vertex))
                     return true;
             return false;
         }
@@ -151,9 +151,8 @@ namespace CECS_328_Assignment_4
         {
             for(int i =0; i<vertices.Count; i++)
             {
-                bool vertexequal = vertices[i].value.Equals(vertex);
-                bool symbolequal = Equals(vertices[i], vertex);
-                if (vertexequal && symbolequal)
+                bool equal = (vertices[i].Equals(vertex));
+                if (equal)
                     return i;
             }
             return -1;
@@ -249,6 +248,7 @@ namespace CECS_328_Assignment_4
                         visited.Add(child);
                         queue.Enqueue(child);
                         //Debugger.Break();
+                        //Find the first vertex of the child whose parent is already in the pairs. 
                         int dist = pairs.FirstOrDefault(t => child.parents.Contains(t.Key)).Value;
                         pairs.Add(child, dist+1);
                     }

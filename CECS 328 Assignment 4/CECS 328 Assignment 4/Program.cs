@@ -20,6 +20,7 @@ namespace CECS_328_Assignment_4
             GraphVertex<List<int>> Avertex = new GraphVertex<List<int>>(new SList<int>() { 1, 2, 3, 4 },"A",null,new List<GraphVertex<List<int>>>() { Bvertex });
             GraphVertex<List<int>> Cvertex = new GraphVertex<List<int>>(new SList<int>() { 1, 2, 3 }, "C",  new List<GraphVertex<List<int>>>() { Bvertex}, new List<GraphVertex<List<int>>>(){ Bvertex,Avertex});
             GraphVertex<List<int>> Dvertex = new GraphVertex<List<int>>(new SList<int>() { 1, 4, 5 }, "D", new List<GraphVertex<List<int>>>() { Avertex }, null);
+             
             //Avertex = Cvertex.ConnectAsChild(Avertex);
            
             //Console.WriteLine(testvertex.value[3]);
