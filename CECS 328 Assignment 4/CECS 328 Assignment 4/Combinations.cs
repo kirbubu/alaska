@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,66 +13,80 @@ namespace CECS_328_Assignment_4
     {
         public List<int> holdStuff = new List<int>();
         public int[] hold;
-        static int counter =1; //using this variable to find the ith subset that the user wants to print out 
-
-        public  void combinationUtil(int []arr,int []data, int start,int end,int index,int r)
+        public static int counter =1; //using this variable to find the ith subset that the user wants to print out 
+        public static string holdIt;
+        public static StringBuilder combinationUtil(int []arr,int []data, int start,int end,int index,int r)
         {
+            StringBuilder returnString = new StringBuilder();
             if (index == r)
             {
-                Console.Write("{ ");
+                returnString.Append("\r\n{ ");
                 for(int j = 0; j < r; j++)
                 {
 
                     if (j == r - 1) //if this is the last number in the sub set
                     {
-                        Console.Write(data[j] + " "); //print out last number in set with no comma after it 
+                        returnString.Append(data[j] + " "); //print out last number in set with no comma after it 
                         j++;
                     }
                     else
                     {
-                        Console.Write(data[j] + ", "); //print out number in subset 
+                        returnString.Append(data[j] + ", "); //print out number in subset 
                     }
                     
                 }
-                Console.Write("}");
-                Console.WriteLine("");
-                return;
+                returnString.Append("}");
+                returnString.Append("");
+                return returnString;
             }
             for (int i = start; i <= end && end - i + 1>= r - index;i++)
             {
                 data[index] = arr[i];
-                combinationUtil(arr, data, i + 1, end, index+1, r); //recursion 
+                returnString.Append(combinationUtil(arr, data, i + 1, end, index+1, r)); //recursion 
             }
+            return returnString;
         }
 
-       public  void printCombination(int []arr,int n,int r)
+       public static StringBuilder printCombination(int n,int r)
         {
             int []data=new int[r];
-            combinationUtil(arr, data, 0,n-1,0,r); 
+            int[] arr = new int[n];
+            for (int i = 0; i < arr.Count(); i++)
+                arr[i] = i + 1;
+            return combinationUtil(arr, data, 0,n-1,0,r); 
         }
         //////
 
-        public void combinationUtil2(int[] arr, int[] data, int start, int end, int index, int r ,int ithSubset)
+
+        public static void combinationUtil2(int[] arr, int[] data, int start, int end, int index, int r, int ithSubset)
         { //used specifically for option 3, takes in ith subset number as a paramter
             
-            if(index==r && counter == ithSubset)
+            // holdIt = "";
+            if (index == r && counter == ithSubset)
             {
-                Console.WriteLine("ith subset (#"+counter+")");
+
+                Console.WriteLine("ith subset (#" + counter + ")");
+
+                holdIt = "{ ";
                 Console.Write("{ ");
                 for (int j = 0; j < r; j++)
                 {
 
                     if (j == r - 1)
                     {
+                        holdIt += data[j] + " ";
                         Console.Write(data[j] + " "); //print out last number in set with no comma after it 
-                        j++;
+                                                      //   j++;
                     }
                     else
                     {
+                        holdIt += data[j] + " ,";
                         Console.Write(data[j] + ", ");
                     }
 
                 }
+                holdIt += "}";
+                //    Console.WriteLine("hold it contents" + holdIt); 
                 Console.Write("}");
                 Console.WriteLine("");
                 counter++; //increment counter to know what subset number we are on 
@@ -79,20 +94,22 @@ namespace CECS_328_Assignment_4
             }
 
 
-          else  if (index == r)
+            else if (index == r)
             {
-               
+
                 counter++; //increment counter to stay on track with what subset number we are currently on 
                 return;
             }
             for (int i = start; i <= end && end - i + 1 >= r - index; i++)
             {
                 data[index] = arr[i];
-                combinationUtil2(arr, data, i + 1, end, index + 1, r,ithSubset);
+
+                combinationUtil2(arr, data, i + 1, end, index + 1, r, ithSubset);
             }
+            //counter = 1;
         }
 
-        public void printCombination2(int[] arr, int n, int r,int ithSubset) //used for option 3, takes in ith subset number as a parameter
+        public static void printCombination2(int[] arr, int n, int r,int ithSubset) //used for option 3, takes in ith subset number as a parameter
         {
             int[] data = new int[r];
             combinationUtil2(arr, data, 0, n - 1, 0, r,ithSubset);

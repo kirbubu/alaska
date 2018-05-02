@@ -6,11 +6,9 @@ c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 
 c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.csproj.GenerateResource.Cache
 c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.exe
 c:\users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.pdb
-C:\Users\Rayhaan\Documents\GitHub\goober\CECS 328 Assignment 4\CECS 328 Assignment 4\bin\Debug\CECS 328 Assignment 4.exe.config
-C:\Users\Rayhaan\Documents\GitHub\goober\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.exe
-C:\Users\Rayhaan\Documents\GitHub\goober\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.pdb
-C:\Users\Rayhaan\Documents\GitHub\goober\CECS 328 Assignment 4\CECS 328 Assignment 4\bin\Debug\CECS 328 Assignment 4.exe
-C:\Users\Rayhaan\Documents\GitHub\goober\CECS 328 Assignment 4\CECS 328 Assignment 4\bin\Debug\CECS 328 Assignment 4.pdb
-C:\Users\Rayhaan\Documents\GitHub\goober\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.csprojResolveAssemblyReference.cache
-C:\Users\Rayhaan\Documents\GitHub\goober\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS_328_Assignment_4.Properties.Resources.resources
-C:\Users\Rayhaan\Documents\GitHub\goober\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS 328 Assignment 4.csproj.GenerateResource.Cache
+C:\Users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS_328_Assignment_4.Form1.resources
+C:\Users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS_328_Assignment_4.Form2.resources
+C:\Users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS_328_Assignment_4.Form3.resources
+C:\Users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS_328_Assignment_4.Form4.resources
+C:\Users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS_328_Assignment_4.Form5.resources
+C:\Users\philp\documents\visual studio 2015\Projects\CECS 328 Assignment 4\CECS 328 Assignment 4\obj\Debug\CECS_328_Assignment_4.OP3Form.resources

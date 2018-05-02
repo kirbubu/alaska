@@ -1,46 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CECS_328_Assignment_4
 {
-    
-    static class Program
+    public partial class Form5 : Form
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        public Form5()
         {
-            GraphVertex<List<int>> Bvertex = new GraphVertex<List<int>>(new SList<int>(){ 1, 2 },"B");
-            GraphVertex<List<int>> Avertex = new GraphVertex<List<int>>(new SList<int>() { 1, 2, 3, 4 },"A",null,new List<GraphVertex<List<int>>>() { Bvertex });
-            GraphVertex<List<int>> Cvertex = new GraphVertex<List<int>>(new SList<int>() { 1, 2, 3 }, "C",  new List<GraphVertex<List<int>>>() { Bvertex}, new List<GraphVertex<List<int>>>(){ Bvertex,Avertex});
-            GraphVertex<List<int>> Dvertex = new GraphVertex<List<int>>(new SList<int>() { 1, 4, 5 }, "D", new List<GraphVertex<List<int>>>() { Avertex }, null);
-             
-            //Avertex = Cvertex.ConnectAsChild(Avertex);
-           
-            //Console.WriteLine(testvertex.value[3]);
-            //Console.WriteLine(testvertex.children[0].value[0]);
-            VertexList<GraphVertex<List<int>>> vertices = new VertexList<GraphVertex<List<int>>>() { Avertex,Bvertex,Cvertex,Dvertex };
-            Graph<List<int>> graphtest = new Graph<List<int>>(vertices);
-           
-            
-            //Console.WriteLine(testvertex.children[0].parents[0].symbol); //Checking to see who A's first child is and what the child's first parent is 
-            //graphtest.Remove(new List<int>() { 1, 2 }, "B");
-            //Debugger.Break();
-            List<KeyValuePair<GraphVertex<List<int>>,int>> list = graphtest.BFT(Avertex);
-            foreach (var pair in list)
-                Console.WriteLine("Vertex: " + pair.Key.symbol + "\tDistance from " + list[0].Key.symbol + ": " + pair.Value);
-            
-            //Graph<int> graph2 = new Graph<int>();
-            //graph2.AddDirectedEdge(new GraphVertex<int>(5, "A", null, null), new GraphVertex<int>(6, "B", null, null));
-            //Debugger.Break();
-          
-
+         
+            InitializeComponent();
             GraphVertex<int> A = new GraphVertex<int>(1, "A");
             GraphVertex<int> B = new GraphVertex<int>(2, "B");
             GraphVertex<int> C = new GraphVertex<int>(3, "C");
@@ -49,9 +24,9 @@ namespace CECS_328_Assignment_4
             GraphVertex<int> F = new GraphVertex<int>(6, "F");
             GraphVertex<int> G = new GraphVertex<int>(7, "G");
             GraphVertex<int> H = new GraphVertex<int>(8, "H");
-            GraphVertex<int> I = new GraphVertex<int>(9 ,"I");
+            GraphVertex<int> I = new GraphVertex<int>(9, "I");
             GraphVertex<int> J = new GraphVertex<int>(10, "J");
-            GraphVertex<int> K = new GraphVertex<int>(11 ,"K");
+            GraphVertex<int> K = new GraphVertex<int>(11, "K");
             GraphVertex<int> L = new GraphVertex<int>(12, "L");
             GraphVertex<int> M = new GraphVertex<int>(13, "M");
             VertexList<GraphVertex<int>> verticeslist = new VertexList<GraphVertex<int>>() { A, B, C, D, E, F, G, H, I, J, K, L, M };
@@ -77,6 +52,10 @@ namespace CECS_328_Assignment_4
             alaska.AddDirectedEdge(K, M);
             alaska.AddDirectedEdge(L, C);
             alaska.AddDirectedEdge(L, I);
+
+            Graph<int> alaskaoriginal = alaska;
+            textBox1.Text = alaskaoriginal.ToString();
+
 
             //Added pipes
             alaska.AddDirectedEdge(K, J);
@@ -115,6 +94,7 @@ namespace CECS_328_Assignment_4
             alaska.AddDirectedEdge(E, J);
             alaska.AddDirectedEdge(G, J);
 
+
             List<Edge<int>> added_pipes = new List<Edge<int>>();
             added_pipes.Add(new Edge<int>(K, J));
             added_pipes.Add(new Edge<int>(M, I));
@@ -151,28 +131,50 @@ namespace CECS_328_Assignment_4
             added_pipes.Add(new Edge<int>(E, L));
             added_pipes.Add(new Edge<int>(E, J));
             added_pipes.Add(new Edge<int>(G, J));
+            foreach(var pipe in added_pipes)
+            {
+                textBox2.Text += "\r\n" + pipe.ToString();
+            }
+
+            foreach(var edge in alaskaoriginal.Edges())
+            {
+                textBox5.Text += "\r\n" + edge.ToString();
+            }
             List<GraphVertex<int>> path = alaska.FindShortestPath(B, E);
             List<Edge<int>> path_edges = new List<Edge<int>>();
-            for(int i = 0; i< path.Count; i++)
+            for (int i = 0; i < path.Count; i++)
             {
-                if(i!=path.Count-1)
-                    path_edges.Add(new Edge<int>(path[i], path[i+1]));
-                Console.WriteLine(path[i].symbol);
+                if (i != path.Count - 1)
+                    path_edges.Add(new Edge<int>(path[i], path[i + 1]));
+                textBox4.Text+= "\r\n" + path[i].symbol;
             }
             //Console.WriteLine(added_pipes[7].Equals(path_edges[2]));
             List<Edge<int>> minimum_added_edges = new List<Edge<int>>();
-            foreach(var pathedge in path_edges)
+            foreach (var pathedge in path_edges)
             {
                 if (added_pipes.Contains(pathedge))
                 {
                     minimum_added_edges.Add(pathedge);
-                    Console.WriteLine(pathedge);
+                    textBox3.Text+="\r\n" +pathedge.ToString();
                 }
             }
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var form1 = (Form1)Tag;
+            form1.Show();
+            Close();
+        }
     }
 }
