@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="CECS_475_Assignment_4._2.View.CalculatorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Command="http://www.galasoft.ch/mvvmlight"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="450"
+             DataContext="{Binding Source={StaticResource Locator},
+    Path=CalculatorViewModel}">
+    <Grid x:Name="LayoutRoot">
+        <TabPanel x:Name="InfoPanel" HorizontalAlignment="Center"
+                  VerticalAlignment="Top">
+            <Label Name="FirstEntry" FontFamily="Bahnschrift Light"
+                   Content="First Entry" TabIndex="0"/>
+            <TextBox Name="FirstEntryBlock" FontFamily="Bahnschrift Light"
+                       Width="125" Height="20"
+                       HorizontalAlignment="Center" 
+                     Text= "{Binding FirstEntry}"/>
+            <Label Name="SecondEntry" FontFamily="Bahnschrift Light"
+                   Content="SecondEntry" TabIndex="3"/>
+            <TextBox x:Name="SecondEntryBlock" FontFamily="Bahnschrift Light"
+                Width="125" Height="20"
+                HorizontalAlignment="Center"  
+                     Text= "{Binding SecondEntry}"/>
+        </TabPanel>
+        <TabPanel x:Name="ButtonGrid" Margin="10,86,9.6,90.4" HorizontalAlignment="Center">
+            <Button Name="AddButton" Content="+" Tag="{Binding Operation}" FontSize="32"
+                    FontFamily="Bahnschrift Light"
+                    Width="50" Height="50" TabIndex="0" Command="{Binding OnButtonCommand}"
+                    CommandParameter="{Binding ButtonSender}">
+            </Button>
+            <Button Name="SubtractButton" Content="-" FontSize="32"
+                    FontFamily="Bahnschrift Light"
+                    Width="50" Height="50" TabIndex="1" Command="{Binding SubtractCommand}">
+            </Button>
+            <Button Name="MultiplyButton" Content="x" FontSize="32"
+                    FontFamily="Bahnschrift Light" 
+                    Width="50" Height="50" TabIndex="2" Command="{Binding MultiplyCommand}">
+            </Button>
+            <Button Name="DivideButton" Content="/" FontSize="32"
+                    FontFamily="Bahnschrift Light"
+                    Width="50" Height="50" TabIndex="3" Command="{Binding DivideCommand}">
+            </Button>
+            <Button Name="ClearButton" Content="C" FontSize="32"
+                    FontFamily="Bahnschrift Light"
+                    Width="50" Height="50" TabIndex="4" Command="{Binding ClearCommand}">
+
+            </Button>
+        </TabPanel>
+        <TextBox x:Name="AnswerTextBox" FontFamily="Bahnschrift Light"
+            Width="248"
+            HorizontalAlignment="Center" Margin="23,171,22.6,49.4"
+            IsEnabled="False"
+                 Text="{Binding Result}"/>
+
+    </Grid>
+</UserControl>

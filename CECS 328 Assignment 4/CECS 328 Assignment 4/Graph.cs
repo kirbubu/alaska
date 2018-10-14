@@ -275,7 +275,7 @@ namespace CECS_328_Assignment_4
         }
         /**
          * Breadth First Traversal
-         * Returns a KeyValuePair of the vertex and it's distance from a given starting vertex.
+         * Returns a list of KeyValuePair of the vertex and it's distance from a given starting vertex.
          * Start: The starting Vertex where the Breadth First Traversal will start from
          **/
         public List<KeyValuePair<GraphVertex<T>,int>> BFT(GraphVertex<T> start)
@@ -315,6 +315,45 @@ namespace CECS_328_Assignment_4
                
             }
             return pairs.ToList() ;
+        }
+
+        public List<KeyValuePair<GraphVertex<T>, int>> BFT2(GraphVertex<T> start)
+        {
+            Dictionary<GraphVertex<T>, int> pairs = new Dictionary<GraphVertex<T>, int>();
+            int distance = 0;
+            //Initialize the list and the queue
+            List<GraphVertex<T>> visited = new List<GraphVertex<T>>();
+            Queue<GraphVertex<T>> queue = new Queue<GraphVertex<T>>();
+            //Add the starting vertex to the visited list and the queue
+            visited.Add(start);
+            queue.Enqueue(start);
+            //Add the starting vertex to the pairs, distance will always be zero
+            pairs.Add(start, distance);
+            distance++;
+            //While the queue isn't empty
+            while (queue.Count != 0)
+            {
+                //Remove the vertex at the start of the queue
+                GraphVertex<T> current = queue.Dequeue();
+
+
+
+                foreach (GraphVertex<T> parent in current.parents)
+                {
+                    if (!visited.Contains(parent))
+                    {
+                        visited.Add(parent);
+                        queue.Enqueue(parent);
+                        //Debugger.Break();
+                        //Find the first vertex of the child whose parent is already in the pairs. 
+                        int dist = pairs.FirstOrDefault(t => parent.children.Contains(t.Key)).Value;
+                        pairs.Add(parent, dist + 1);
+                    }
+                }
+
+
+            }
+            return pairs.ToList();
         }
 
         public override string ToString()

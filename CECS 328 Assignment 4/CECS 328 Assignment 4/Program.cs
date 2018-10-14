@@ -151,6 +151,7 @@ namespace CECS_328_Assignment_4
             added_pipes.Add(new Edge<int>(E, L));
             added_pipes.Add(new Edge<int>(E, J));
             added_pipes.Add(new Edge<int>(G, J));
+            List<List<Edge<int>>> edge_combinations = Combinations.ReturnCombinations(added_pipes, 3);
             List<GraphVertex<int>> path = alaska.FindShortestPath(B, E);
             List<Edge<int>> path_edges = new List<Edge<int>>();
             for(int i = 0; i< path.Count; i++)

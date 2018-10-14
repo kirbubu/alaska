@@ -8,8 +8,8 @@ namespace CECS_328_Assignment_4
 {
     class Edge<T>
     {
-        GraphVertex<T> to;
-        GraphVertex<T> from;
+        public GraphVertex<T> to;
+        public GraphVertex<T> from;
         
         public Edge(){
 

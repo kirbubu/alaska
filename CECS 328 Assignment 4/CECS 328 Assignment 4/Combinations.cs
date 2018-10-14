@@ -57,7 +57,43 @@ namespace CECS_328_Assignment_4
         }
         //////
 
+       public static List<List<Edge<int>>> vertexCombinations(List<Edge<int>> array, List<Edge<int>> data, int start, int end, int index, int r)
+        {
+            //Debugger.Break();
+            List<List<Edge<int>>> list = new List<List<Edge<int>>>();
+            if (index == r)
+            {
+                List<Edge<int>> vertices = new List<Edge<int>>();
+                //returnString.Append("\r\n{ ");
+                for (int j = 0; j < r; j++)
+                {
+                    
+             
+                        vertices.Add(data[j]);
 
+                }
+                //returnString.Append("}");
+                //returnString.Append("");
+                list.Add(vertices);
+                return list;
+            }
+            for (int i = start; i <= end && end - i + 1 >= r - index; i++)
+            {
+                data[index] = array[i];
+                list.AddRange(vertexCombinations(array, data, i + 1, end, index + 1, r)); //recursion 
+            }
+            return list;
+        }
+        
+
+
+       public static List<List<Edge<int>>> ReturnCombinations(List<Edge<int>> array,int r)
+        {
+            List<Edge<int>> data = new List<Edge<int>>(r);
+            for (int i = 0; i < r; i++)
+                data.Add(null);
+            return vertexCombinations(array, data, 0, array.Count- 1, 0, r);
+        }
         public static void combinationUtil2(int[] arr, int[] data, int start, int end, int index, int r, int ithSubset)
         { //used specifically for option 3, takes in ith subset number as a paramter
             
