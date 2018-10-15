@@ -1,0 +1,36 @@
+﻿<Window x:Class="CECS_475_Gym_Membership.View.AddWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CECS_475_Gym_Membership.View"
+        mc:Ignorable="d"
+        Title="Add Membership" Height="286" Width="404"
+        DataContext="{Binding Source={StaticResource Locator},
+        Path=MembershipViewModel}">
+    <Grid Margin="0,0,2,226">
+        <TabPanel HorizontalAlignment="Center" Width="220">
+            <TextBox Name="FirstNameBox" FontFamily="Bahnschrift Light"
+                     Width="125" Height="20" HorizontalAlignment="Left"
+                     Text="{Binding FirstName}"/>
+            <Label Name="FirstNameLabel" Content="First Name"/>
+            <TextBox Name="LastNameBox" FontFamily="Bahnschrift Light"
+                     Width="125" Height="20" HorizontalAlignment="Left"
+                     Text="{Binding LastName}"/>
+            <Label Name="LastNameLabel" Content="Last Name"/>
+            <TextBox Name="EmailBox" FontFamily="Bahnschrift Light"
+                     Width="125" Height="20" HorizontalAlignment="Left"
+                     Text="{Binding Email}"/>
+            <Label Name="EmailLabel" Content="Email"/>
+            <TabPanel Name="SubPanel" Width="150" HorizontalAlignment="Center" Margin="35,14,35,-14">
+                <Button Name="SaveButton" FontFamily="Bahnschrift Light"
+                    Width="50" Height="20" Content="Save" HorizontalAlignment="Center"
+                        Command="{Binding SaveButtonCommand}"/>
+                <Button Name="CancelButton" FontFamily="Bahnschrift Light"
+                        Width="50" Height="20" Content="Cancel" HorizontalAlignment="Center" Margin="27,0,-27,0"/>
+            </TabPanel>
+
+
+        </TabPanel>
+    </Grid>
+</Window>

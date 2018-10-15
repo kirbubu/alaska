@@ -34,3 +34,39 @@ C:\Users\philp\Documents\Visual Studio 2017\Projects\CECS 475 Assignment 4.2\CEC
 C:\Users\philp\Documents\Visual Studio 2017\Projects\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.csproj.CopyComplete
 C:\Users\philp\Documents\Visual Studio 2017\Projects\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.exe
 C:\Users\philp\Documents\Visual Studio 2017\Projects\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.pdb
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\CECS 475 Assignment 4.2.exe.config
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\CECS 475 Assignment 4.2.exe
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\CECS 475 Assignment 4.2.pdb
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\CECS 475 Assignment 4.2.exe.CodeAnalysisLog.xml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\CECS 475 Assignment 4.2.exe.lastcodeanalysissucceeded
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.dll
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\System.Windows.Interactivity.dll
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.pdb
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.xml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.csprojAssemblyReference.cache
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\Skins\MainSkin.baml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\View\CalculatorView.baml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\MainWindow.g.cs
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\View\CalculatorView.g.cs
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\App.g.cs
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2_MarkupCompile.cache
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2_MarkupCompile.lref
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\App.baml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\MainWindow.baml
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.g.resources
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS_475_Assignment_4._2.Properties.Resources.resources
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.csproj.GenerateResource.cache
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.csproj.CoreCompileInputs.cache
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.csproj.CopyComplete
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.exe
+D:\GitHub\goober\CECS 475 Assignment 4.2\CECS 475 Assignment 4.2\obj\Debug\CECS 475 Assignment 4.2.pdb
