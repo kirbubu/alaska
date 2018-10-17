@@ -17,7 +17,7 @@ namespace CECS_475_Gym_Membership.View
     /// <summary>
     /// Interaction logic for ErrorEmailPopup.xaml
     /// </summary>
-    public partial class ErrorEmailPopup : Window
+    public partial class ErrorEmailPopup : Window, ICloseable
     {
         public ErrorEmailPopup()
         {

@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CECS_475_Gym_Membership.View"
         mc:Ignorable="d"
+        x:Name="EmailError"
         Title="Entry Error" Height="168.75" Width="235.106"
         DataContext = "{Binding Source={StaticResource Locator},
-        Path=MembershipViewModel}">
+        Path=EmailErrorViewModel}">
     <Grid>
         <Label Name="ErrorLabel" Content="Must be a valid email address." FontFamily="Bahnschrift Light" Margin="30,29,0,10"/>
-        <Button Name="OKButton" Content="Ok" Width="50" Height="20" Margin="85,68,92,46" Command="{Binding OkButtonClose}" />
+        <Button Name="OKButton" Content="Ok" Width="50" Height="20" Margin="85,68,92,46" Command="{Binding OkButtonClose}"
+                CommandParameter="{Binding ElementName=EmailError}"/>
     </Grid>
 </Window>

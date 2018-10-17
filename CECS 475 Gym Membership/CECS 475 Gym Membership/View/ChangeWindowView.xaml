@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CECS_475_Gym_Membership.View"
         mc:Ignorable="d"
-        Title="Change Membership" Height="286" Width="404"
+        x:Name="ChangeWindow"
+        Title="Change Membership" Height="296.532" Width="356.199"
         DataContext="{Binding Source={StaticResource Locator},
-        Path=MembershipViewModel}">
+        Path=ChangeViewModel}">
     <Grid Margin="0,0,2,226">
         <TabPanel HorizontalAlignment="Center" Width="220">
             <TextBox Name="FirstNameBox" FontFamily="Bahnschrift Light"
@@ -25,9 +26,12 @@
             <TabPanel Name="SubPanel" Width="150" HorizontalAlignment="Center" Margin="35,14,35,-14">
                 <Button Name="SaveButton" FontFamily="Bahnschrift Light"
                     Width="50" Height="20" Content="Update" HorizontalAlignment="Center"
-                        Command="{Binding UpdateButtonCommand}"/>
+                        Command="{Binding UpdateButtonCommand}"
+                        CommandParameter="{Binding ElementName=ChangeWindow}"/>
                 <Button Name="CancelButton" FontFamily="Bahnschrift Light"
-                        Width="50" Height="20" Content="Delete" HorizontalAlignment="Center" Margin="27,0,-27,0"/>
+                        Width="50" Height="20" Content="Delete" HorizontalAlignment="Center" Margin="27,0,-27,0"
+                        Command="{Binding DeleteButtonCommand}"
+                        CommandParameter="{Binding ElementName=ChangeWindow}"/>
             </TabPanel>
 
 

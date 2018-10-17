@@ -19,7 +19,8 @@
                     Command="{Binding AddButtonCommand}"/>
             <Button Name="ExitButton" FontFamily="Bahnschrift Light"
                     Content="Exit" TabIndex="1" Height="30" Width="50"
-                    VerticalAlignment="Center" />
+                    VerticalAlignment="Center"
+                    Command="{Binding ExitButtonCommand}"/>
         </TabPanel>
         <ListBox x:Name="MembershipBox" HorizontalAlignment="Left" Height="214" Margin="46,102,0,0" 
                  VerticalAlignment="Top" Width="381" FontFamily="Bahnschrift Light" 

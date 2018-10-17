@@ -25,10 +25,16 @@ namespace CECS_475_Gym_Membership.ViewModel
     /// </summary>
     public class ViewModelLocator
     {
+        /// <summary>
+        /// Initialized Constructor 
+        /// </summary>
         static ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<MembershipViewModel>();
+            SimpleIoc.Default.Register<AddViewModel>();
+            SimpleIoc.Default.Register<EmailErrorViewModel>();
+            SimpleIoc.Default.Register<ChangeViewModel>();
         }
 
         /// <summary>
@@ -42,6 +48,39 @@ namespace CECS_475_Gym_Membership.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<MembershipViewModel>();
+            }
+        }
+
+        /// <summary>
+        /// Gets the Add View Model
+        /// </summary>
+        public AddViewModel AddViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<AddViewModel>();
+            }
+        }
+
+        /// <summary>
+        /// Gets the Email Error View Model
+        /// </summary>
+        public EmailErrorViewModel EmailErrorViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<EmailErrorViewModel>();
+            }
+        }
+
+        /// <summary>
+        /// Gets the Change View Model
+        /// </summary>
+        public ChangeViewModel ChangeViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<ChangeViewModel>();
             }
         }
 

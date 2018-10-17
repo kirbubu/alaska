@@ -17,7 +17,7 @@ namespace CECS_475_Gym_Membership.View
     /// <summary>
     /// Interaction logic for AddWindowView.xaml
     /// </summary>
-    public partial class AddWindowView : Window
+    public partial class AddWindowView : Window, ICloseable
     {
         public AddWindowView()
         {

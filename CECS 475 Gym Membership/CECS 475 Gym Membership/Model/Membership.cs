@@ -57,6 +57,8 @@ namespace CECS_475_Gym_Membership.Model
             }
             set
             {
+                if (value == null)
+                    throw new EmailInvalidException();
                 List<string> words = new List<string>(value.Split('@'));
                 bool IsEmailPartsValid = (words.Count == 2);
                 bool IsEndingValid = (emailendings.FindIndex(em => string.Equals(words[1], em)) > -1);
