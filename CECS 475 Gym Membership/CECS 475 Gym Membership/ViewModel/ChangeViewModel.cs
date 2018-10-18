@@ -81,6 +81,7 @@ namespace CECS_475_Gym_Membership.ViewModel
         {
             try
             {
+
                 Messenger.Default.Send<MessageMember>(new MessageMember(FirstName, LastName, Email, "Delete"));
                 if (window != null)
                     window.Close();
@@ -100,6 +101,8 @@ namespace CECS_475_Gym_Membership.ViewModel
         {
             try
             {
+                if (FirstName.Length > 15 || LastName.Length > 15 || FirstName == "" || LastName == "")
+                    throw new EmailInvalidException();
                 Messenger.Default.Send<MessageMember>(new MessageMember(FirstName, LastName, Email, "Update"));
                 
                 if (window!=null)

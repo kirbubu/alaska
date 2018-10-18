@@ -214,7 +214,12 @@ namespace CECS_475_Gym_Membership.ViewModel
     static class MembershipUtils
     {
 
-        //Read-
+        /// <summary>
+        /// Reads all lines of a textfile and parses them
+        /// into Membership objects. 
+        /// </summary>
+        /// <param name="path">File name to read from</param>
+        /// <returns>List of all the parsed memberships</returns>
         public static List<Membership> ReadMemberships(string path)
         {
             List<Membership> memberships = new List<Membership>();

@@ -10,7 +10,7 @@
         DataContext = "{Binding Source={StaticResource Locator},
         Path=EmailErrorViewModel}">
     <Grid>
-        <Label Name="ErrorLabel" Content="Must be a valid email address." FontFamily="Bahnschrift Light" Margin="30,29,0,10"/>
+        <Label Name="ErrorLabel" Content="Must be a valid email address/name" FontFamily="Bahnschrift Light" Margin="10,29,9.8,10.2"/>
         <Button Name="OKButton" Content="Ok" Width="50" Height="20" Margin="85,68,92,46" Command="{Binding OkButtonClose}"
                 CommandParameter="{Binding ElementName=EmailError}"/>
     </Grid>
