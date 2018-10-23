@@ -74,7 +74,9 @@ namespace CECS_475_Gym_Membership.ViewModel
             if(obj.Message == "Delete")
             {
                 MembershipUtils.DeleteMembership(file, ChosenMember);
-                _memberships = new BindingList<Membership>(MembershipUtils.ReadMemberships(file));
+                //_memberships = new BindingList<Membership>(MembershipUtils.ReadMemberships(file));
+                _memberslist.Remove(ChosenMember);
+                _memberships = new BindingList<Membership>(_memberslist);
                 ChosenMember = null;
                 RaisePropertyChanged("Memberships");
             }

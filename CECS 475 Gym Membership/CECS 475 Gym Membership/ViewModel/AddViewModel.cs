@@ -30,7 +30,9 @@ namespace CECS_475_Gym_Membership.ViewModel
         /// </summary>
         public AddViewModel()
         {
-            
+            FirstName = "";
+            LastName = "";
+            Email = "";
         }
 
         /// <summary>
@@ -71,6 +73,9 @@ namespace CECS_475_Gym_Membership.ViewModel
                 Messenger.Default.Send<MessageMember>(new MessageMember(FirstName, LastName, Email, "Add"));
                 if (window != null)
                     window.Close();
+                FirstName = "";
+                LastName = "";
+                Email = "";
             }
             catch (EmailInvalidException)
             {
