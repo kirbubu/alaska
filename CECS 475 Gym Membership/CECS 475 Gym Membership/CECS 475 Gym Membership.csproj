@@ -70,8 +70,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ICloseable.cs" />
     <Compile Include="Model\EmailInvalidException.cs" />
     <Compile Include="Model\Membership.cs" />
+    <Compile Include="Model\MessageMember.cs" />
+    <Compile Include="ViewModel\AddViewModel.cs" />
+    <Compile Include="ViewModel\ChangeViewModel.cs" />
+    <Compile Include="ViewModel\EmailErrorViewModel.cs" />
     <Compile Include="ViewModel\MembershipViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\AddWindowView.xaml.cs">

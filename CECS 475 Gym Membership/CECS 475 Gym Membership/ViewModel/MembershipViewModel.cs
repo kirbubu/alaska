@@ -23,10 +23,6 @@ namespace CECS_475_Gym_Membership.ViewModel
         
         private ICommand _addButtonCommand;
         private ICommand _exitButtonCommand;
-        private ICommand _saveButtonCommand;
-        private ICommand _updateButtonCommand;
-        private ICommand _deleteButtonCommand;
-        private ICommand _cancelButtonCommand;
         private ICommand _mouseDoubleClickCommand;
         private static string file = "gym members.txt";
         private BindingList<Membership> _memberships = new BindingList<Membership>(MembershipUtils.ReadMemberships(file));
@@ -38,14 +34,58 @@ namespace CECS_475_Gym_Membership.ViewModel
         public ChangeWindowView cpopup;
         public ErrorEmailPopup errorpop;
         public Membership ChosenMember { get; set; }
+        public MembershipView mainview;
 
-
+        /// <summary>
+        /// Construcotr that initializes the register to receives messages from the popups this
+        /// view model creates
+        /// </summary>
         public  MembershipViewModel()
         {
+            Messenger.Default.Register<MessageMember>(this, ReceiveMessage);
             //Memberships.Add(bob);
             //Console.WriteLine(bob);
         }
 
+        /// <summary>
+        /// Receives a message from a MessageMember and performs an action (add, update, delete)
+        /// </summary>
+        /// <param name="obj">Object to be added, updated, or deleted</param>
+        public void ReceiveMessage(MessageMember obj)
+        {
+            if (obj.Message == "Add")
+            {
+                Membership mem = obj;
+                _memberships.Add(obj);
+                _memberslist.Add(obj);
+                MembershipUtils.WriteMembership(file, obj);
+                RaisePropertyChanged("Memberships");
+            }
+            if (obj.Message == "Update")
+            {
+                Membership mem = obj;
+                int replaceIndex = Memberships.IndexOf(ChosenMember);
+                _memberslist[replaceIndex] = obj;
+                _memberships = new BindingList<Membership>(_memberslist);
+                MembershipUtils.UpdateMembership(file, ChosenMember, obj);
+                RaisePropertyChanged("Memberships");
+                ChosenMember = null;
+            }
+            if(obj.Message == "Delete")
+            {
+                MembershipUtils.DeleteMembership(file, ChosenMember);
+                //_memberships = new BindingList<Membership>(MembershipUtils.ReadMemberships(file));
+                _memberslist.Remove(ChosenMember);
+                _memberships = new BindingList<Membership>(_memberslist);
+                ChosenMember = null;
+                RaisePropertyChanged("Memberships");
+            }
+
+        }
+
+        /// <summary>
+        /// Property of Memberships that is a binding list for the list box ItemSource Binding
+        /// </summary>
         public BindingList<Membership> Memberships
         {
             get
@@ -54,6 +94,9 @@ namespace CECS_475_Gym_Membership.ViewModel
             }
         }
 
+        /// <summary>
+        /// Command for the add button
+        /// </summary>
         public ICommand AddButtonCommand
         {
             get
@@ -63,117 +106,63 @@ namespace CECS_475_Gym_Membership.ViewModel
             }
         }
 
+        /// <summary>
+        /// Command for the exit button
+        /// </summary>
         public ICommand ExitButtonCommand
         {
             get
             {
-                return null;
+                _exitButtonCommand = new RelayCommand(ExitButtonAction);
+                return _exitButtonCommand; 
             }
         }
-
-        public ICommand SaveButtonCommand
-        {
-            get
-            {
-                _saveButtonCommand = new RelayCommand(OnSaveMemberAction);
-                RaisePropertyChanged("Memberships");
-                return _saveButtonCommand;
-                
-            }
-        }
-
-        public ICommand UpdateButtonCommand
-        {
-            get
-            {
-                _updateButtonCommand = new RelayCommand(OnUpdateMemberAction);
-                RaisePropertyChanged("Memberships");
-                return _updateButtonCommand;
-            }
-        }
-
-        public ICommand CancelButtonCommand
-        {
-            get
-            {
-                _cancelButtonCommand = new RelayCommand(OnCancelButtonAction);
-                return _cancelButtonCommand;
-            }
-        }
-
+        
+        /// <summary>
+        /// Command for the double click on a selected item in the ListBox
+        /// </summary>
         public ICommand MouseDoubleClick
         {
             get
             {
-                _mouseDoubleClickCommand = new RelayCommand<object>(param => OnMouseDoubleClickAction(param));
+                _mouseDoubleClickCommand = new RelayCommand<object>(OnMouseDoubleClickAction);
                 return _mouseDoubleClickCommand;
             }
         }
 
-
+        /// <summary>
+        /// Creates a new popup for the adding member window menu
+        /// </summary>
         private void OnAddMemberAction()
         {
                 popup = new AddWindowView();
                 popup.Show();
         }
 
-        private void OnSaveMemberAction()
+        /// <summary>
+        /// Exits the program
+        /// </summary>
+        private void ExitButtonAction()
         {
-            try
-            {
-                Membership obj = new Membership(FirstName,LastName,Email);
-                _memberships.Add(obj);
-                _memberslist.Add(obj);
-                MembershipUtils.WriteMembership(file, obj);
-                
-                if (popup.IsActive)
-                    popup.Close();
-                FirstName = "";
-                LastName = "";
-                Email = "";
-            }
-            catch (EmailInvalidException)
-            {
-                
-            }
+            System.Environment.Exit(0);
         }
 
-        private void OnUpdateMemberAction()
-        {
-            try
-            {
-                Membership obj = new Membership(FirstName, LastName, Email);
-                int replaceIndex = Memberships.IndexOf(ChosenMember);
-                _memberslist[replaceIndex] = obj;
-                _memberships = new BindingList<Membership>(_memberslist);
-                RaisePropertyChanged("Memberships");
-                ChosenMember = null;
-                if (cpopup.IsActive)
-                    cpopup.Close();
-            }
-            catch (EmailInvalidException)
-            {
-                errorpop = new ErrorEmailPopup();
-                errorpop.Show();
-            }
-        }
-
-        private void OnCancelButtonAction()
-        {
-            if (popup.IsActive)
-                popup.Close();
-            FirstName = "";
-            LastName = "";
-            Email = "";
-        }
-
+        /// <summary>
+        /// Choses the selected item from the Listbox andn then opens a new menu, passing the value to the 
+        /// update/delete menu
+        /// </summary>
+        /// <param name="o"></param>
         public void OnMouseDoubleClickAction(object o)
         {
             ChosenMember = (Membership)o;
             cpopup = new ChangeWindowView();
+            Messenger.Default.Send<Membership>(ChosenMember);
             cpopup.Show();
         }
 
+        /// <summary>
+        /// Property for first name
+        /// </summary>
         public string FirstName
         {
             get
@@ -186,6 +175,9 @@ namespace CECS_475_Gym_Membership.ViewModel
             }
         }
 
+        /// <summary>
+        /// Property for last name
+        /// </summary>
         public string LastName
         {
             get
@@ -198,6 +190,9 @@ namespace CECS_475_Gym_Membership.ViewModel
             }
         }
 
+        /// <summary>
+        /// Property for email
+        /// </summary>
         public string Email
         {
             get
@@ -212,26 +207,7 @@ namespace CECS_475_Gym_Membership.ViewModel
 
 
  
-            private ICommand _okButtonClose;
 
-           
-
-            public ICommand OkButtonClose
-            {
-                get
-                {
-                    _okButtonClose = new RelayCommand(OkButtonCloseAction);
-                    return _okButtonClose;
-                }
-            }
-
-
-            public void OkButtonCloseAction()
-            {
-                if (errorpop.IsActive)
-                    errorpop.Close();
-            }
-        
 
 
     }
@@ -239,6 +215,13 @@ namespace CECS_475_Gym_Membership.ViewModel
 
     static class MembershipUtils
     {
+
+        /// <summary>
+        /// Reads all lines of a textfile and parses them
+        /// into Membership objects. 
+        /// </summary>
+        /// <param name="path">File name to read from</param>
+        /// <returns>List of all the parsed memberships</returns>
         public static List<Membership> ReadMemberships(string path)
         {
             List<Membership> memberships = new List<Membership>();
@@ -253,6 +236,8 @@ namespace CECS_475_Gym_Membership.ViewModel
                     string line = reader.ReadLine();
                     if (line == null)
                         moreLines = false;
+                    else if (line == "")
+                        continue;
                     else
                     {
                         string[] parts = line.Split('|');
@@ -265,21 +250,49 @@ namespace CECS_475_Gym_Membership.ViewModel
             return memberships;
         }
 
+        /// <summary>
+        /// Utility function that reads a file from the current directory and 
+        /// writes a membership object into it.
+        /// </summary>
+        /// <param name="path">File to write to</param>
+        /// <param name="m">Membership object to be written into the file</param>
         public static void WriteMembership(string path, Membership m)
         {
             string currentDirectory = Environment.CurrentDirectory.Replace("bin\\Debug", "");
             path = currentDirectory + path;
             using (StreamWriter writer = new StreamWriter(path,append: true))
             {
-                writer.WriteLine("\n" + m.FirstName + "|" + m.LastName + "|" + m.Email);
+                writer.WriteLine("\n"+m.FirstName + "|" + m.LastName + "|" + m.Email);
             }
         }
-
+        
+        /// <summary>
+        /// Utility function that deletes a given membership from the file designated.
+        /// </summary>
+        /// <param name="path">File to be modified</param>
+        /// <param name="m">Membership object to be delete from the file</param>
         public static void DeleteMembership(string path, Membership m)
         {
+            string currentDirectory = Environment.CurrentDirectory.Replace("bin\\Debug", "");
+            path = currentDirectory + path;
             string temp = Path.GetTempFileName();
             string delete = m.FirstName + "|" + m.LastName + "|" + m.Email;
             var newFileLines = File.ReadLines(path).Where(line => line != delete);
+
+            File.WriteAllLines(temp, newFileLines);
+            File.Delete(path);
+            File.Move(temp, path);
+
+        }
+
+        public static void UpdateMembership(string path, Membership replace, Membership update)
+        {
+            string currentDirectory = Environment.CurrentDirectory.Replace("bin\\Debug", "");
+            path = currentDirectory + path;
+            string temp = Path.GetTempFileName();
+            string delete = replace.FirstName + "|" + replace.LastName + "|" + replace.Email;
+            string replacestring = update.FirstName + "|" + update.LastName + "|" + update.Email;
+            var newFileLines = File.ReadLines(path).Select(line => line.Replace(delete, replacestring));
 
             File.WriteAllLines(temp, newFileLines);
             File.Delete(path);

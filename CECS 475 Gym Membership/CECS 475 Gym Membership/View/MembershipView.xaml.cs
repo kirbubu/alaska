@@ -25,6 +25,8 @@ namespace CECS_475_Gym_Membership.View
             InitializeComponent();
         }
 
+
+
         private void MembershipBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

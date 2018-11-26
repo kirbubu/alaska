@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Philip\source\repos\CECS 475 Gym Membership\CECS 475 Gym Membership\obj\Debug\
+C:\Users\philp\Documents\GitHub\goober\CECS 475 Gym Membership\CECS 475 Gym Membership\obj\Debug\
 CECS_475_Gym_Membership
 none
 false
 CODE_ANALYSIS;DEBUG;TRACE
-C:\Users\Philip\source\repos\CECS 475 Gym Membership\CECS 475 Gym Membership\App.xaml
+C:\Users\philp\Documents\GitHub\goober\CECS 475 Gym Membership\CECS 475 Gym Membership\App.xaml
 61617774642
 
-17813516686
-68-952570729
+22-1467607766
+68-72298655
 MainWindow.xaml;Skins\MainSkin.xaml;View\AddWindowView.xaml;View\ChangeWindowView.xaml;View\ErrorEmailPopup.xaml;View\MembershipView.xaml;
 
-False
+True
 
