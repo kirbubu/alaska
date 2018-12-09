@@ -159,7 +159,7 @@ namespace CECS_475_Gym_Membership.ViewModel
             Messenger.Default.Send<Membership>(ChosenMember);
             cpopup.Show();
         }
-
+        #region Properties
         /// <summary>
         /// Property for first name
         /// </summary>
@@ -189,7 +189,7 @@ namespace CECS_475_Gym_Membership.ViewModel
                 _lastName = value;
             }
         }
-
+        #endregion
         /// <summary>
         /// Property for email
         /// </summary>

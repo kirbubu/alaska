@@ -29,3 +29,13 @@ C:\Users\Philip\Desktop\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.csproj.
 C:\Users\Philip\Desktop\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.csproj.CoreCompileInputs.cache
 C:\Users\Philip\Desktop\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.exe
 C:\Users\Philip\Desktop\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.pdb
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\bin\Debug\FlickrViewer.exe.config
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\bin\Debug\FlickrViewer.exe
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\bin\Debug\FlickrViewer.pdb
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.csprojAssemblyReference.cache
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.FlickrViewerForm.resources
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.Properties.Resources.resources
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.csproj.GenerateResource.cache
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.csproj.CoreCompileInputs.cache
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.exe
+C:\Users\philp\Documents\GitHub\goober\FlickrViewer\FlickrViewer\obj\Debug\FlickrViewer.pdb
