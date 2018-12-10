@@ -105,7 +105,7 @@ using CECS_475_Web_App.Models;
             WriteLiteral("\">\r\n        <h3>Comments</h3>\r\n        <div class=\"comments\">\r\n        </div>\r\n        <hr />\r\n        <div>\r\n            <a href=\"#\" class=\"add-comment\">Add a comment</a>\r\n            <div class=\"new-comment hide\">\r\n                ");
             EndContext();
             BeginContext(823, 340, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "64506b9ef48a488aa727198ce300a292", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c684909701054847ae65e372309f5036", async() => {
                 BeginContext(841, 315, true);
                 WriteLiteral(@"
                     <div class=""form-group"">
