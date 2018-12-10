@@ -41,7 +41,7 @@ $(function initializeCommentComponents() {
 function Post(el) {
 
     var $el = $(el),
-        postEl = $el.hasClass('blog-post') ? $el : $el.parents('.blog-post'),
+        postEl = $el.hasClass('forum-post') ? $el : $el.parents('.forum-post'),
         addCommentEl = postEl.find('.add-comment'),
         newCommentEl = postEl.find('.new-comment'),
         commentEl = newCommentEl.find('[name=Body]'),
