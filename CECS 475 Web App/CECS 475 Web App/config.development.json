@@ -1,6 +1,7 @@
 {
   "ConnectionStrings": {
-    "ForumDataContext": "Server=(localdb)\\mssqllocaldb;Database=SmashForum;Trusted_Connection=True;"
+    "ForumDataContext": "Server=(localdb)\\mssqllocaldb;Database=SmashForum;Trusted_Connection=True;",
+    "IdentityDataContext": "Server=(localdb)\\mssqllocaldb;Database=SmashForum_Identity;Trusted_Connection=True;"
   },
   "FeatureToggles": {
     "EnableDeveloperExceptions": true

@@ -66,3 +66,5 @@ D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor
 D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Forum\Post.g.cshtml.cs
 D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Post.g.cshtml.cs
 D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Forum\Create.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs

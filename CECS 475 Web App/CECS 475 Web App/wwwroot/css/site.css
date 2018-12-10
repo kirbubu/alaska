@@ -90,3 +90,9 @@ body {
     display: none;
 }
 
+.log-text{
+    align-content:center;
+    text-align:center;
+    color:aliceblue;
+}
+
