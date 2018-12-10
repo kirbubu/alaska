@@ -1,0 +1,27 @@
+﻿@model IEnumerable<CECS_475_Web_App.Models.Post>
+
+
+<h1>Main Forum</h1>
+<p>View the latest forum posts on Smash Bros!</p>
+
+<p class="pager">
+    @if (ViewBag.HasPreviousPage)
+    {
+        <a class="prev" href="@Url.Action("Index","Forum", new { page = ViewBag.PreviousPage })">
+            &lt; Previous Page
+        </a>
+    }
+
+    @if (ViewBag.HasNextPage)
+    {
+        <a class="next" href="@Url.Action("Index","Forum", new { page = ViewBag.NextPage })">
+            Next Page &gt;
+        </a>
+    }
+</p>
+<div class="forum-posts">
+    @foreach (var post in Model)
+    {
+        @Html.Partial("_Post", post)
+    }
+</div>

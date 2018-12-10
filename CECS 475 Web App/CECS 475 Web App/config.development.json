@@ -1,0 +1,8 @@
+{
+  "ConnectionStrings": {
+    "ForumDataContext": "Server=(localdb)\\mssqllocaldb;Database=SmashForum;Trusted_Connection=True;"
+  },
+  "FeatureToggles": {
+    "EnableDeveloperExceptions": true
+  }
+}

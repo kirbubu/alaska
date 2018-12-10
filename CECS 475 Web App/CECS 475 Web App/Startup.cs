@@ -2,21 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CECS_475_Web_App.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using CECS_475_Web_App.Models;
+
 
 namespace CECS_475_Web_App
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IConfigurationRoot configuration;
+
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            configuration = new ConfigurationBuilder()
+                                .AddEnvironmentVariables()
+                                .AddJsonFile(env.ContentRootPath + "/config.json")
+                                .AddJsonFile(env.ContentRootPath + "/config.development.json", true)
+                                .Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -24,6 +37,15 @@ namespace CECS_475_Web_App
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<FormattingService>();
+
+            services.AddTransient<FeatureToggles>(x => new FeatureToggles
+            {
+                EnableDeveloperExceptions =
+                    configuration.GetValue<bool>("FeatureToggles:EnableDeveloperExceptions")
+            });
+
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -31,13 +53,33 @@ namespace CECS_475_Web_App
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDbContext<ForumDataContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("ForumDataContext");
+                options.UseSqlServer(connectionString);
+            });
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory logg)
         {
+
+            logg.AddConsole();
+
+            var configuration = new ConfigurationBuilder()
+                                    .AddEnvironmentVariables()
+                                    .AddJsonFile(env.ContentRootPath + "/config.json")
+                                    .AddJsonFile(env.ContentRootPath + "/config.development.json", true)
+                                    .Build();
+
+            if (configuration.GetValue<bool>("FeatureToggles:EnableDeveloperExceptions"))
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -48,6 +90,12 @@ namespace CECS_475_Web_App
                 app.UseHsts();
             }
 
+
+            app.Use(async (context, next) => { 
+                if (context.Request.Path.Value.Contains("invalid"))
+                    throw new Exception("ERROR");
+                await next();
+            });
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

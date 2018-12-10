@@ -1,0 +1,28 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model CECS_475_Web_App.Models.Post
+@{
+    Layout = "_Layout";
+}
+
+<h2>Create a Forum Post</h2>
+
+<fieldset>
+    <form asp-action="Create" asp-controller="Forum">
+        <div asp-validation-summary="All" class="input-validation-error"></div>
+        <p>
+            <label asp-for="Title"/>
+            <input asp-for="Title" class="form-control" placeholder="Post Title"/>
+            <span asp-validation-for="Title"></span>
+        </p>
+        <p>
+            <label asp-for="Body" />
+            <textarea asp-for="Body" class="form-control" placeholder="Post Body"></textarea>
+            <span asp-validation-for="Body"></span>
+        </p>
+
+        <p>
+            <button type="submit">Create Post</button>
+        </p>
+    </form>
+</fieldset>
+

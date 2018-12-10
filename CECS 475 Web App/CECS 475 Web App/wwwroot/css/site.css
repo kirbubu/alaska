@@ -14,8 +14,10 @@ body {
 
 /* Carousel */
 .carousel-caption p {
-    font-size: 20px;
+    font-size: 32px;
     line-height: 1.4;
+    font-family:Roboto;
+    font-weight: 500;
 }
 
 /* Make .svg files in the carousel display properly in older browsers */
@@ -35,3 +37,56 @@ body {
         display: none;
     }
 }
+
+.image1{
+    height:80%
+}
+
+.Navigator{
+    background-color:black;
+}
+
+.navtext{
+    color: black;
+    font-size:24px;
+    font-family:Roboto;
+}
+
+.forum-post{
+    color:darkslateblue;
+    font-size:24px;
+    font-family:Roboto;
+    font-weight:400;
+    margin-bottom:0px;
+}
+.details{
+    color:black;
+    font-size:12px;
+    margin-top:0px;
+    margin-bottom:20px;
+}
+
+.tab-content{
+    color:black;
+    font-size:12px;
+}
+
+.error, .field-validation-error, .validation-summary-errors{
+    color:#cb202a;
+    font-weight:bold;
+}
+
+.hide {
+    display: none;
+}
+
+#home #mainContent .show-comments {
+    display: block;
+    margin-top: 1em;
+}
+
+
+#home #mainContent .blog-posts .show-comments {
+    display: none;
+}
+

@@ -30,3 +30,39 @@ C:\Users\philp\Documents\Visual Studio 2017\Projects\CECS 475 Web App\CECS 475 W
 C:\Users\philp\Documents\Visual Studio 2017\Projects\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.dll
 C:\Users\philp\Documents\Visual Studio 2017\Projects\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.pdb
 C:\Users\philp\Documents\Visual Studio 2017\Projects\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.csproj.CopyComplete
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\bin\Debug\netcoreapp2.1\CECS 475 Web App.deps.json
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\bin\Debug\netcoreapp2.1\CECS 475 Web App.runtimeconfig.json
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\bin\Debug\netcoreapp2.1\CECS 475 Web App.runtimeconfig.dev.json
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\bin\Debug\netcoreapp2.1\CECS 475 Web App.dll
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\bin\Debug\netcoreapp2.1\CECS 475 Web App.pdb
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\bin\Debug\netcoreapp2.1\CECS 475 Web App.Views.dll
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\bin\Debug\netcoreapp2.1\CECS 475 Web App.Views.pdb
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.csprojAssemblyReference.cache
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.csproj.CoreCompileInputs.cache
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.RazorAssemblyInfo.cache
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.RazorAssemblyInfo.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.AssemblyInfoInputs.cache
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.AssemblyInfo.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.TagHelpers.input.cache
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.TagHelpers.output.cache
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.RazorCoreGenerate.cache
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.RazorTargetAssemblyInfo.cache
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.RazorTargetAssemblyInfo.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.Views.pdb
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.dll
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.pdb
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\CECS 475 Web App.csproj.CopyComplete
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Forum\Index.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Forum\Post.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Post.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Forum\Create.g.cshtml.cs

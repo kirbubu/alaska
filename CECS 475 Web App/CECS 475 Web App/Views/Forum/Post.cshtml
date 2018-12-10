@@ -1,0 +1,16 @@
+﻿@model CECS_475_Web_App.Models.Post
+@{
+    Layout = "_Layout";
+}
+
+<article class="forum-post">
+    <h1>@Model.Title</h1>
+    <div class="details">
+        Posted <span>@Model.Posted</span> by <span>@Model.User</span>
+    </div>
+    <div class="tab-content">
+        @Model.Body
+    </div>
+</article>
+
+
