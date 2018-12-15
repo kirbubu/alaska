@@ -1,0 +1,11 @@
+﻿@model CECS_475_Web_App.Models.Character
+@inject CECS_475_Web_App.Models.FormattingService Format
+@{
+    ViewData["Title"] = "character";
+}
+
+<div class="col-md-3">
+    <img src="~/images/Characters/@Model.File" alt="Microsoft Azure" class="img-responsive" />
+    <h3>@Model.Name</h3>
+</div>
+

@@ -1,0 +1,11 @@
+﻿@model CECS_475_Web_App.Models.CharacterModel
+@{
+    ViewData["Title"] = "character";
+}
+
+<div class="row">
+    @foreach (var character in Model.Characters)
+    {
+        @Html.Partial("Character", character);
+    }
+</div>

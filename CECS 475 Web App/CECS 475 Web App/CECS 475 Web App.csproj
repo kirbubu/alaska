@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\Characters\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
