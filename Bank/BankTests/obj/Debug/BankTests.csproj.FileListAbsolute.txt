@@ -1,0 +1,16 @@
+C:\Users\Philip\source\repos\Bank\BankTests\obj\Debug\BankTests.csprojAssemblyReference.cache
+C:\Users\Philip\source\repos\Bank\BankTests\obj\Debug\BankTests.csproj.CoreCompileInputs.cache
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\BankTests.dll
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\BankTests.pdb
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Bank.dll
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Bank.pdb
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Philip\source\repos\Bank\BankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Philip\source\repos\Bank\BankTests\obj\Debug\BankTests.csproj.CopyComplete
+C:\Users\Philip\source\repos\Bank\BankTests\obj\Debug\BankTests.dll
+C:\Users\Philip\source\repos\Bank\BankTests\obj\Debug\BankTests.pdb
