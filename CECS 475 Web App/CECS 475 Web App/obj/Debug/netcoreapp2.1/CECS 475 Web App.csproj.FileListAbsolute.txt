@@ -110,3 +110,7 @@ C:\Users\philp\Documents\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Deb
 C:\Users\philp\Documents\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Characters\Character.g.cshtml.cs
 C:\Users\philp\Documents\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Characters\Search.g.cshtml.cs
 C:\Users\philp\Documents\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Characters\CharacterDisplay.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Characters\character.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Characters\CharacterDisplay.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Characters\Index.g.cshtml.cs
+D:\GitHub\goober\CECS 475 Web App\CECS 475 Web App\obj\Debug\netcoreapp2.1\Razor\Views\Characters\Search.g.cshtml.cs

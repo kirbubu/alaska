@@ -1,11 +1,21 @@
 ﻿@model CECS_475_Web_App.Models.CharacterModel
+@inject CECS_475_Web_App.Models.FormattingService Format
 @{
-    ViewData["Title"] = "character";
+    ViewData["Title"] = "CharacterModel";
 }
 
 <div class="row">
+    <form>
+        <p>
+            Search: <input type="search" asp-for="SearchString" class="form-control" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
     @foreach (var character in Model.Characters)
     {
-        @Html.Partial("Character", character);
+        <div class="col-md-3">
+            <img src="~/images/Characters/@character.File" alt="@character.Name" class="img-responsive" />
+            <h3>@character.Name</h3>
+        </div>
     }
 </div>

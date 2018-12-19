@@ -1,8 +1,10 @@
-﻿@model CECS_475_Web_App.Models.Character
+﻿@model CECS_475_Web_App.Models.CharacterModel
 @{
     ViewData["Title"] = "Search Function";
 }
 <form>
-    <p>Search</p>
-    <input type="search" asp-for="Name" class="form-control" />
+    <p>
+        Search: <input type="search" asp-for="SearchString" class="form-control" />
+        <input type="submit" value="Filter" />
+    </p>
 </form>

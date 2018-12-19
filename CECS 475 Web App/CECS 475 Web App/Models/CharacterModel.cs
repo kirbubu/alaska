@@ -10,8 +10,6 @@ namespace CECS_475_Web_App.Models
 
     public class CharacterModel
     {
-
-
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
         
@@ -26,8 +24,7 @@ namespace CECS_475_Web_App.Models
             { 
                 chars = chars.Where(s => s.Name.Contains(SearchString));
             }
-            //characters = await chars.ToAsyncList();
-
+            Characters = await EntityFrameworkQueryableExtensions.ToListAsync<Character>(((IQueryable<Character>)chars.Where(s => s.Name.Contains(SearchString))));
 
         }
 
